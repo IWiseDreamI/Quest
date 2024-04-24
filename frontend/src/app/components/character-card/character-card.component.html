@@ -1,0 +1,16 @@
+<a class="
+        flex flex-col bg-neutral-900 text-white px-[24px] pt-[24px] pb-[16px] 
+        rounded-md border-2 border-white w-[320px] my-[20px] jersey text-xl
+        cursor-pointer duration-500 mx-[4px]
+    " [routerLink]="'/character/' + character.id">
+    <div class="overflow-hidden rounded-md mb-[12px] relative">
+        <div class="z-10 absolute top-[12px] right-[12px] p-[8px] rounded-full bg-[#000000aa]">
+            <img src="/assets/icons/{{character.gender.toLowerCase()}}.svg" alt="" class="w-[40px]">
+        </div>
+
+        <img src="{{character.image}}" alt="{{character.image}}" class="duration-500 hover:scale-105">
+    </div>
+
+    <h3>Name: {{character.name}}</h3>
+    <h3>Status: {{character.status}}</h3>
+</a>

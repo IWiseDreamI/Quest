@@ -1,0 +1,25 @@
+<header
+    class="flex py-[4vh] fixed top-0 left-0 px-[5vw] bg-neutral-900 z-50 w-[100%] neon-box items-center justify-between">
+    <a class="text-5xl jersey select-none cursor-pointer" routerLink="/">Rick & Morty</a>
+    <div class="items-center justify-between hidden lg:flex">
+        <button (click)="sort()"
+            class="h-[40px] px-[16px] border-2 rounded-md bg-black invert hover:invert-0 border-black mr-[40px]">Sort</button>
+        <form class="flex items-center">
+            <select name="Gender" id="select-gender" [(ngModel)]="gender"
+                class="px-[12px] py-[6px] outline-none rounded-md border-white border-2 bg-neutral-800 h-[40px] mr-[20px] text-gray-400">
+                <option value="" selected>Off</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="unknown">Unknown</option>
+            </select>
+            <input type="text" placeholder="Find character"
+                class="px-[16px] h-[40px] py-[8px] border-2 border-white rounded-md w-[300px] outline-none jersey bg-neutral-800 mr-[20px]"
+                [(ngModel)]="searchForm.searchInput" [ngModelOptions]="{standalone: true}">
+            <button class="w-[40px] h-[40px] px-[8px] border-2 rounded-md bg-black invert hover:invert-0 border-black"
+                type="button" (click)="search()">
+                <img src="/assets/icons/search.svg" alt="">
+            </button>
+        </form>
+    </div>
+
+</header>

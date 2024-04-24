@@ -1,0 +1,13 @@
+<div class="flex flex-wrap w-[100%] justify-around">
+    <ng-container *ngFor="let character of characters">
+        <app-character-card [character]="character"></app-character-card>
+    </ng-container>
+    <div *ngIf="loading" class="text-5xl jersey w-[100%] text-center mt-[48px]">LOADING...</div>
+    <div *ngIf="!loading && !isEnd" class="flex items-center justify-around w-[100%]">
+        <button (click)="loadMore()" class="
+        jersey py-[12px] px-[24px] text-2xl bg-neutral-900 
+        border-2 border-white rounded-md mt-[48px]">Load more</button>
+    </div>
+
+
+</div>

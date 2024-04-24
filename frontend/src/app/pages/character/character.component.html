@@ -1,0 +1,44 @@
+<div class="
+        flex flex-col bg-neutral-900 text-white px-[24px] pt-[24px] pb-[16px] 
+        rounded-md border-2 border-white my-[24px] jersey text-xl
+        cursor-pointer items-center justify-between lg:flex-row 
+    ">
+    <img src="{{character?.image}}" alt="{{character?.image}}" class="rounded-md w-[320px]">
+    <div class="w-[320px] mt-[24px] lg:ml-[40px] lg:w-[400px] lg:mt-[0]">
+        <h3 class="text-4xl">Character:</h3>
+        <div class="text-2xl flex justify-between mt-[12px]">
+            <h3>Name:</h3>
+            <h3>{{character?.name}}</h3>
+            <br />
+        </div>
+
+        <div class="text-2xl flex justify-between mt-[12px]">
+            <h3>Status:</h3>
+            <h3>{{character?.status}}</h3>
+            <br />
+        </div>
+
+        <div class="text-2xl flex justify-between mt-[12px]">
+            <h3>Species:</h3>
+            <h3>{{character?.species}}</h3>
+            <br />
+        </div>
+
+        <div class="text-2xl flex justify-between mt-[12px]">
+            <h3>Gender:</h3>
+            <h3>{{character?.gender}}</h3>
+            <br />
+        </div>
+
+        <div class="text-2xl flex justify-between items-center mt-[12px]">
+            <h3>Episodes:</h3>
+            <h3
+                class="w-[60%] text-2xl h-[36px] overflow-y-scroll text-center px-[12px] bg-neutral-900 border-2 border-white rounded-md">
+                <ng-container *ngFor="let episode of character?.episode">
+                    {{episode.name}};<br />
+                </ng-container>
+            </h3>
+            <br />
+        </div>
+    </div>
+</div>

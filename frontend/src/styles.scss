@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Jersey';
+    src: url('/assets/fonts/Jersey.ttf');
+}
+
+.jersey {
+    font-family: 'Jersey';
+    color: #00b179;
+    text-shadow: 0px 0px 8px #00b179;
+}
+
+.neon-box {
+    box-shadow: 0px 0px 8px #00b179;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    transition: 1000ms;
+    background: #00b179;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    transition: 1000ms;
+    background: #ffffff;
+}
