@@ -1,7 +1,6 @@
 Recommendations:
 
-Node - v20.12.2
-npm - 10
+Node - v20.12.2; npm - 10
 
 Start instructions:
 
